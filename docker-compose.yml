@@ -1,0 +1,14 @@
+version: "3.1"
+
+services:
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: "tobi"
+      POSTGRES_PASSWORD: "tobithebest"
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - /infrastrackters/pgdata:/var/lib/postgresql/data \
